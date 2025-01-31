@@ -474,12 +474,12 @@ address {
 
 .footer .container {
   display: flex;
-  gap: 70px;
   align-items: baseline;
 }
 
 .footer-adress {
   width: 231px;
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -509,6 +509,10 @@ address {
 }
 
 /* Footer Socials Block */
+
+.footer-socials {
+  margin-right: auto;
+}
 
 .footer-socials-title {
   font-weight: 700;
@@ -546,6 +550,78 @@ address {
 .footer-socials-link:hover,
 .footer-socials-link:focus {
   background-color: var(--accent-color);
+}
+
+/* Footer (Subscribe form) */
+
+.subscribe-tittle {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white);
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.subscribe-field {
+  width: 358px;
+  height: 50px;
+  padding: 16px 15px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe-field::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-white);
+
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--accent-btn-color);
+}
+
+.subscribe-icon {
+  fill: currentColor;
 }
 
 /* Portfolio */
@@ -695,8 +771,10 @@ address {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: var(--primary-white);
+  border-radius: 4px;
 
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
@@ -735,4 +813,58 @@ address {
 
 .modal-close-icon {
   fill: currentColor;
+}
+
+.modal-tittle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--tittle-color);
+
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-field {
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  padding: 11px 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-textarea {
+  width: 100%;
+
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
