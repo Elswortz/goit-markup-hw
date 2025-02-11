@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --primary-white: #fff;
+  --accent-color: #2196f3;
+  --accent-btn-color: #188ce8;
+  --tittle-color: #212121;
+  --text-color: #757575;
+  --hero-bg-color: #c4c4c4;
+  --footer-bg-color: #2f303a;
+  --porfolio-btn-color: #f5f4fa;
+  --team-bg-color: #f5f4fa;
+  --header-border-color: #ececec;
+  --icons-color: #afb1b8;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --portfolio-overlay-color: rgba(33, 150, 243, 0.9);
+
+  /* Fonts */
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Animations */
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

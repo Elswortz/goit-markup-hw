@@ -1,0 +1,9 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  background-color: var(--primary-white);
+}
