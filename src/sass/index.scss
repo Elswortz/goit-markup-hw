@@ -1,2 +1,15 @@
-@import './common';
-@import './example';
+
+// Utils
+@import './utils/module';
+
+// Base
+@import './base/module';
+
+// Components
+@import './components/module';
+
+// Layout
+@import './layout/module';
+
+// Pages
+@import './pages/module';
