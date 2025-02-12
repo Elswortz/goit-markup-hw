@@ -20,11 +20,12 @@
   border-radius: 4px;
   outline: none;
 
-  transition: border-color var(--transition-duration) var(--transition-timing-function);
-}
+  transition: border-color var(--transition-duration)
+  var(--transition-timing-function);
 
-.field__input:focus {
-  border-color: var(--accent-color);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .field__icon {
@@ -35,21 +36,22 @@
   fill: var(--tittle-color);
 
   transition: fill var(--transition-duration) var(--transition-timing-function);
-}
 
-.field__input:focus + .field__icon {
-  fill: var(--accent-color);
+  .field__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .field__textarea {
   height: 120px;
   resize: none;
   padding: 12px 16px;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
-.field__textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}

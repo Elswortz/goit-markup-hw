@@ -16,14 +16,14 @@
   background-color: var(--primary-white);
   cursor: pointer;
 
-  transition: background-color var(--transition-duration) var(--transition-timing-function),
-    color var(--transition-duration) var(--transition-timing-function);
-}
+  transition: background-color var(--transition-duration)
+  var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 
-.close-btn:hover,
-.close-btn:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-white);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white);
+  }
 }
 
 .close-btn__icon {

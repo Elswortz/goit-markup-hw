@@ -11,7 +11,12 @@
   background-color: var(--primary-white);
   border-radius: 4px;
 
-  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration)
+  var(--transition-timing-function);
+
+  .backdrop--is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 .modal__title {
@@ -41,8 +46,6 @@
 
 .modal__checkbox {
   appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
 
   width: 16px;
   height: 15px;
@@ -56,15 +59,15 @@
   background-repeat: no-repeat;
   background-origin: border-box;
 
-  transition: border-color var(--transition-duration) var(--transition-timing-function),
-    background-color var(--transition-duration) var(--transition-timing-function),
-    background-size var(--transition-duration) var(--transition-timing-function);
-}
+  transition: border-color var(--transition-duration)
+  var(--transition-timing-function), background-color var(--transition-duration)
+  var(--transition-timing-function), background-size var(--transition-duration) var(--transition-timing-function);
 
-.modal__checkbox:checked {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  background-size: 100%;
+  &:checked {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-size: 100%;
+  }
 }
 
 .modal__checkbox-label {
@@ -80,8 +83,4 @@
 .modal__btn {
   display: block;
   margin: 0 auto;
-}
-
-.backdrop--is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
 }
