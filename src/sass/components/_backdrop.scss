@@ -8,9 +8,9 @@
 
   opacity: 1;
   transition: opacity var(--transition-duration) var(--transition-timing-function);
-}
 
-.backdrop.backdrop--is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
