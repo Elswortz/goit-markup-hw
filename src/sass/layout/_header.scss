@@ -3,17 +3,18 @@
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 }
 
 .header__logo {
   color: var(--tittle-color);
-  margin-right: 93px;
+  margin-right: auto;
 }
 
 .header__contact-list {
-  display: flex;
+  // display: flex;
+  display: none;
 }
 
 .header__contact-item {
@@ -29,8 +30,8 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   padding: 32px 0;
   gap: 10px;
 

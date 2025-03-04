@@ -1,11 +1,37 @@
 .nav {
   display: flex;
-  margin-right: auto;
   align-items: center;
+  margin-right: auto;
+  min-height: 60px;
+}
+
+.nav__button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+}
+
+.nav__icon-close {
+  display: none;
+
+  .nav__button.nav__button--is-open & {
+    display: block;
+  }
+}
+
+.nav__icon-menu {
+  display: block;
+
+  .nav__button.nav__button--is-open & {
+    display: none;
+  }
 }
 
 .nav__list {
-  display: flex;
+  // display: flex;
+  display: none;
 }
 
 .nav__item {
@@ -49,4 +75,3 @@
     color: var(--accent-color);
   }
 }
-
