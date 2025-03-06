@@ -1,10 +1,13 @@
 .header {
   border: 1px solid var(--header-border-color);
+  align-content: center;
+  position: relative;
+  min-height: 60px;
 }
 
 .header__container {
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__logo {
@@ -12,29 +15,68 @@
   margin-right: auto;
 }
 
-.header__contact-list {
-  // display: flex;
+.header__menu {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 48px 40px;
+  background-color: var(--primary-white);
+
+  &.header__menu--is-open {
+    display: block;
+  }
+}
+
+.header-menu__button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  z-index: 9999;
+  color: var(--accent-color);
+}
+
+.header__icon-close {
+  display: none;
+
+  .header-menu__button.header-menu__button--is-open & {
+    display: block;
+  }
+}
+
+.header__icon-menu {
+  display: block;
+
+  .header-menu__button.header-menu__button--is-open & {
+    display: none;
+  }
+}
+
+.header__contact-list {
+  margin-bottom: 64px;
 }
 
 .header__contact-item {
-  margin-right: 50px;
-}
+  margin-bottom: 32px;
 
-.header__contact-item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .header__contact-link {
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 
   // display: flex;
   // align-items: center;
-  padding: 32px 0;
-  gap: 10px;
-
+  // padding: 32px 0;
+  // gap: 10px;
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
@@ -45,4 +87,32 @@
 
 .header__contact-icon {
   fill: currentColor;
+  display: none;
+}
+
+.header__social-list {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header__social-item {
+  margin-right: 10px;
+
+  &:not(:last-child)::after {
+    content: '|';
+    display: inline-flex;
+    margin-left: 10px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
