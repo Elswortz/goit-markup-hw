@@ -35,7 +35,6 @@
   padding: 0px;
   border: none;
   background-color: transparent;
-  z-index: 9999;
   color: var(--accent-color);
 }
 
@@ -57,6 +56,7 @@
 
 .header__contact-list {
   margin-bottom: 64px;
+  display: none;
 }
 
 .header__contact-item {
@@ -88,31 +88,4 @@
 .header__contact-icon {
   fill: currentColor;
   display: none;
-}
-
-.header__social-list {
-  display: inline-flex;
-  align-items: center;
-}
-
-.header__social-item {
-  margin-right: 10px;
-
-  &:not(:last-child)::after {
-    content: '|';
-    display: inline-flex;
-    margin-left: 10px;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.header__social-link {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
 }
