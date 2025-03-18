@@ -1,6 +1,13 @@
 .services {
+  display: none;
   padding-top: 0px;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
+
+.services__title {}
 
 .services__list {
   display: flex;

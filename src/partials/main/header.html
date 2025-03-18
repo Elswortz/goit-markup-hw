@@ -6,9 +6,7 @@
       </a>
       <ul class="nav__list list">
         <li class="nav__item">
-          <a href="./index.html" class="nav__link nav__link--current link"
-            >Студія</a
-          >
+          <a href="./index.html" class="nav__link nav__link--current link">Студія</a>
         </li>
         <li class="nav__item">
           <a href="./portfolio.html" class="nav__link link">Портфоліо</a>
@@ -36,5 +34,64 @@
         </a>
       </li>
     </ul>
+    <button
+      class="header-menu__button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="header__menu"
+      open-menu
+    >
+      <svg class="header__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+        <use class="header__icon-menu" href="./images/icons/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu" menu-container>
+    <button class="mobile-menu__btn" type="button" aria-controls="mobile-menu" close-menu>
+      <svg class="mobile-menu__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+        <use href="./images/icons/sprite.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+    <div class="mobile-menu__wrapper">
+      <nav class="mobile-menu__nav" id="mobile-menu" data-menu>
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link mobile-menu__link--current link"
+              >Студія</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link link">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mobile-menu__contacts-wrapper">
+      <ul class="mobile-menu__contacts-list">
+        <li class="mobile-menu__contacts-item">
+          <a href="" class="mobile-menu__contacts-link accent">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-menu__contacts-item">
+          <a href="" class="mobile-menu__contacts-link">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__socials-list">
+        <li class="mobile-menu__socials-item">
+          <a href="" class="mobile-menu__socials-link">Instagram</a>
+        </li>
+        <li class="mobile-menu__socials-item">
+          <a href="" class="mobile-menu__socials-link">Twitter</a>
+        </li>
+        <li class="mobile-menu__socials-item">
+          <a href="" class="mobile-menu__socials-link">Facebook</a>
+        </li>
+        <li class="mobile-menu__socials-item">
+          <a href="" class="mobile-menu__socials-link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>

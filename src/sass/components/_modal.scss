@@ -1,21 +1,35 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-
-  width: 528px;
-  min-height: 581px;
+  position: relative;
   padding: 40px;
 
   background-color: var(--primary-white);
   border-radius: 4px;
 
-  transition: transform var(--transition-duration)
-  var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
 
   .backdrop--is-hidden & {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: scale(0.8);
+
+    @media screen and (min-width: 480px) {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
   }
 }
 
@@ -49,6 +63,8 @@
 
   width: 16px;
   height: 15px;
+  min-width: 16px;
+  min-height: 15px;
 
   border: 2px solid var(--tittle-color);
   border-radius: 2px;
@@ -59,9 +75,9 @@
   background-repeat: no-repeat;
   background-origin: border-box;
 
-  transition: border-color var(--transition-duration)
-  var(--transition-timing-function), background-color var(--transition-duration)
-  var(--transition-timing-function), background-size var(--transition-duration) var(--transition-timing-function);
+  transition: border-color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    background-size var(--transition-duration) var(--transition-timing-function);
 
   &:checked {
     border-color: var(--accent-color);
@@ -71,8 +87,14 @@
 }
 
 .modal__checkbox-label {
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   user-select: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal__link {
